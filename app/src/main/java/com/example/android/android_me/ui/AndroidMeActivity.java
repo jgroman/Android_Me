@@ -19,6 +19,7 @@ package com.example.android.android_me.ui;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.android.android_me.R;
 import com.example.android.android_me.data.AndroidImageAssets;
@@ -26,23 +27,28 @@ import com.example.android.android_me.data.AndroidImageAssets;
 // This activity will display a custom Android image composed of three body parts: head, body, and legs
 public class AndroidMeActivity extends AppCompatActivity {
 
-    // TODO (1) Create a fragment_master_list.xml layout file to display all our images; this should be a GridView
+    private static final String TAG = AndroidMeActivity.class.getSimpleName();
 
-    // TODO (2) Create a new class called MasterListFragment which will display the GridView list of ALL AndroidMe images
+    // COMPLETED (1) Create a fragment_master_list.xml layout file to display all our images; this should be a GridView
+
+    // COMPLETED (2) Create a new class called MasterListFragment which will display the GridView list of ALL AndroidMe images
         // In the fragment class, you'll need to implement an empty constructor, and onCreateView
 
-    // TODO (3) In the MasterListFragment class, create a new MasterListAdapter and set it on the GridView
+    // COMPLETED (3) In the MasterListFragment class, create a new MasterListAdapter and set it on the GridView
         // The MasterListAdapter code is provided; it creates the ImageViews that are contained in the GridView
         // The adapter takes as parameters (Context context, List<Integer> imageIds)
 
     // After creating the fragment..
-    // TODO (4) Create a new Activity named MainActivity and a corresponding layout file that displays a MasterListFragment
+    // COMPLETED (4) Create a new Activity named MainActivity and a corresponding layout file that displays a MasterListFragment
         // Remember, to display a static fragment in a layout file, use the <fragment> tag
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Log.d(TAG, "onCreate: ");
+
         setContentView(R.layout.activity_android_me);
 
         // Only create new fragments when there is no previously saved state
